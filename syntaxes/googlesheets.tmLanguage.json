@@ -1,0 +1,45 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Google Sheets",
+	"patterns": [
+		{
+			"include": "#strings"
+		},
+		{
+			"match": "(\\b|(?<=\\W|^)'[^']+'!)([A-Z]+\\d*:[A-Z]+\\d*|[A-Z]*\\d+:[A-Z]*\\d+)\\b",
+			"name": "variable.other.cell.range.googlesheets"
+		},
+		{
+			"match": "(\\b|(?<=\\W|^)'[^']+'!)[A-Z]+\\d+\\b",
+			"name": "variable.other.cell.single.googlesheets"
+		},
+		{
+			"match": "\\b(TRUE|FALSE)\\b",
+			"name": "constant.language.boolean.$1.googlesheets"
+		},
+		{
+			"match": "(?<=\\W|^)(#NULL!|#DIV/0!|#VALUE!|#REF!|#NAME\\?|#NUM!|#N/A)(?=\\W)",
+			"name": "constant.language.error.$1.googlesheets"
+		},
+		{
+			"match": "\\b\\d+(\\.\\d+)?\\b",
+			"name": "constant.numeric.googlesheets"
+		},
+		{
+			"match": "\\b([A-Z][A-Z_.]*[A-Z]|[A-Z])\\b",
+			"name": "support.function.googlesheets"
+		},
+		{
+			"match": "\\b[A-Za-z_]+\\b",
+			"name": "variable.other.constant.object.googlesheets"
+		}
+	],
+	"repository": {
+		"strings": {
+			"name": "string.quoted.double.googlesheets",
+			"begin": "\"",
+			"end": "\""
+		}
+	},
+	"scopeName": "source.googlesheets"
+}

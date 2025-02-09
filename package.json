@@ -1,0 +1,25 @@
+{
+  "name": "vscode-google-sheets-grammar",
+  "displayName": "vscode-google-sheets-grammar",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.97.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "googlesheets",
+      "aliases": ["Google Sheets", "googlesheets"],
+      "extensions": [""],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "googlesheets",
+      "scopeName": "source.googlesheets",
+      "path": "./syntaxes/googlesheets.tmLanguage.json"
+    }]
+  }
+}
